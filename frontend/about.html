@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night Cafe - О нас</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <i class="fas fa-moon"></i>
+            <span>Night Cafe</span>
+          </div>
+          <ul class="nav-menu">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+            </li>
+            <li>
+              <a href="menu.html"><i class="fas fa-utensils"></i> Меню</a>
+            </li>
+            <li>
+              <a href="about.html" class="active"
+                ><i class="fas fa-info-circle"></i> О нас</a
+              >
+            </li>
+            <li>
+              <a href="admin.html" class="admin-link"
+                ><i class="fas fa-lock"></i> Админ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="page-title">О нас</h1>
+
+      <div class="about-content">
+        <div class="about-section">
+          <h2><i class="fas fa-map-marker-alt"></i> Как нас найти</h2>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Адрес</h3>
+              <p><i class="fas fa-location-dot"></i> Ул. Ночная, 25</p>
+              <p>Центральный район, рядом с площадью</p>
+              <p class="small-text">Бесплатная парковка с 20:00 до 8:00</p>
+            </div>
+            <div class="contact-card">
+              <h3>Часы работы</h3>
+              <p><i class="fas fa-clock"></i> пн-пт: 20:00 - 7:00</p>
+              <p><i class="fas fa-clock"></i> сб-вс: 19:00 - 4:00</p>
+              <p class="small-text">Бронирование столиков за 2 часа</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <h2><i class="fas fa-history"></i> Наша история</h2>
+          <p>
+            Night Cafe открылся в 2020 году с простой идеей - создать место, где
+            можно найти уют и вкусный кофе, когда остальной город уже спит. За 5
+            лет мы стали любимым местом для ночных сов, творческих людей и тех,
+            кто ценит атмосферу спокойствия.
+          </p>
+          <p>
+            Наши бариста проходят обучение у лучших кофейных экспертов, а
+            десерты готовит команда талантливых кондитеров.
+          </p>
+        </div>
+
+        <div class="about-section">
+          <h2><i class="fas fa-calendar-check"></i> Оформить предзаказ</h2>
+          <div class="order-form-container">
+            <form id="order-form" class="order-form">
+              <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Ваше имя</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Иван Иванов"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Телефон</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="+7 (900) 123-45-67"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="time"
+                  ><i class="fas fa-clock"></i> Желаемое время</label
+                >
+                <input type="datetime-local" id="time" required />
+              </div>
+              <div class="form-group">
+                <label for="guests"
+                  ><i class="fas fa-users"></i> Количество гостей</label
+                >
+                <select id="guests">
+                  <option value="1">1 человек</option>
+                  <option value="2">2 человека</option>
+                  <option value="3">3-4 человека</option>
+                  <option value="5">5+ человек</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-large">
+                <i class="fas fa-paper-plane"></i> Отправить заявку
+              </button>
+              <p class="form-note">
+                Мы перезвоним вам для подтверждения заказа в течение 30 минут.
+              </p>
+            </form>
+            <div id="order-message" class="message-hidden"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <i class="fas fa-moon"></i>
+            <span>Night Cafe</span>
+          </div>
+          <div class="footer-contacts">
+            <h4>Контакты:</h4>
+            <p><i class="fas fa-phone"></i> +7 (836) 528-34-65</p>
+            <p><i class="fas fa-envelope"></i> cafe@nightcafe.com</p>
+          </div>
+          <div class="footer-hours">
+            <h4>График работы:</h4>
+            <p>пн-пт: 20:00 - 7:00</p>
+            <p>сб-вс: 19:00 - 4:00</p>
+          </div>
+        </div>
+        <p class="copyright">© 2025 Night Cafe. Все права защищены.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

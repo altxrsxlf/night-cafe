@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night Cafe - Меню</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <i class="fas fa-moon"></i>
+            <span>Night Cafe</span>
+          </div>
+          <ul class="nav-menu">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+            </li>
+            <li>
+              <a href="menu.html" class="active"
+                ><i class="fas fa-utensils"></i> Меню</a
+              >
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-info-circle"></i> О нас</a>
+            </li>
+            <li>
+              <a href="admin.html" class="admin-link"
+                ><i class="fas fa-lock"></i> Админ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="page-title">Наше меню</h1>
+
+      <div class="menu-categories">
+        <button class="category-btn active" data-category="all">Все</button>
+        <button class="category-btn" data-category="coffee">Кофе</button>
+        <button class="category-btn" data-category="dessert">Десерты</button>
+        <button class="category-btn" data-category="snack">Закуски</button>
+      </div>
+
+      <div class="menu-items" id="menu-items">
+        <!-- Меню будет загружаться динамически из JavaScript -->
+        <div class="loading">Загрузка меню...</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <i class="fas fa-moon"></i>
+            <span>Night Cafe</span>
+          </div>
+          <div class="footer-contacts">
+            <h4>Контакты:</h4>
+            <p><i class="fas fa-phone"></i> +7 (836) 528-34-65</p>
+            <p><i class="fas fa-envelope"></i> cafe@nightcafe.com</p>
+          </div>
+          <div class="footer-hours">
+            <h4>График работы:</h4>
+            <p>пн-пт: 20:00 - 7:00</p>
+            <p>сб-вс: 19:00 - 4:00</p>
+          </div>
+        </div>
+        <p class="copyright">© 2025 Night Cafe. Все права защищены.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

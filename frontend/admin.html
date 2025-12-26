@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Night Cafe - Админ-панель</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <i class="fas fa-moon"></i>
+            <span>Night Cafe</span>
+          </div>
+          <ul class="nav-menu">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+            </li>
+            <li>
+              <a href="menu.html"><i class="fas fa-utensils"></i> Меню</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-info-circle"></i> О нас</a>
+            </li>
+            <li>
+              <a href="admin.html" class="active admin-link"
+                ><i class="fas fa-lock"></i> Админ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="admin-container" id="admin-container">
+        <!-- Форма входа -->
+        <div class="login-form" id="login-form">
+          <h1><i class="fas fa-lock"></i> Вход в админ-панель</h1>
+          <p class="login-subtitle">Только для администраторов Night Cafe</p>
+
+          <form id="admin-login-form">
+            <div class="form-group">
+              <label for="admin-email"
+                ><i class="fas fa-envelope"></i> Email</label
+              >
+              <input
+                type="email"
+                id="admin-email"
+                placeholder="admin@nightcafe.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="admin-password"
+                ><i class="fas fa-key"></i> Пароль</label
+              >
+              <input
+                type="password"
+                id="admin-password"
+                placeholder="Введите пароль"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-large">
+              <i class="fas fa-sign-in-alt"></i> Войти
+            </button>
+            <p class="form-note">Тестовый доступ: admin@test.com / admin123</p>
+          </form>
+          <div id="login-message" class="message-hidden"></div>
+        </div>
+
+        <!-- Панель администратора (скрыта до входа) -->
+        <div class="admin-panel hidden" id="admin-panel">
+          <div class="admin-header">
+            <h1><i class="fas fa-tachometer-alt"></i> Панель управления</h1>
+            <button id="logout-btn" class="btn btn-small">
+              <i class="fas fa-sign-out-alt"></i> Выйти
+            </button>
+          </div>
+
+          <div class="admin-stats">
+            <div class="stat-card">
+              <h3><i class="fas fa-shopping-cart"></i> Всего заказов</h3>
+              <p class="stat-number" id="total-orders">0</p>
+            </div>
+            <div class="stat-card">
+              <h3><i class="fas fa-clock"></i> Сегодня</h3>
+              <p class="stat-number" id="today-orders">0</p>
+            </div>
+            <div class="stat-card">
+              <h3><i class="fas fa-users"></i> Пользователи</h3>
+              <p class="stat-number" id="total-users">0</p>
+            </div>
+            <div class="stat-card">
+              <h3><i class="fas fa-coffee"></i> Товаров в меню</h3>
+              <p class="stat-number" id="total-items">0</p>
+            </div>
+          </div>
+
+          <div class="admin-section">
+            <h2><i class="fas fa-list"></i> Последние заказы</h2>
+            <div class="table-container">
+              <table class="orders-table" id="orders-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Имя</th>
+                    <th>Телефон</th>
+                    <th>Время</th>
+                    <th>Гости</th>
+                    <th>Статус</th>
+                    <th>Действия</th>
+                  </tr>
+                </thead>
+                <tbody id="orders-body">
+                  <!-- Заказы будут загружаться здесь -->
+                  <tr>
+                    <td colspan="7">Загрузка данных...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button id="refresh-orders" class="btn btn-small">
+              <i class="fas fa-sync-alt"></i> Обновить
+            </button>
+          </div>
+
+          <div class="admin-section">
+            <h2><i class="fas fa-cog"></i> Быстрые действия</h2>
+            <div class="action-buttons">
+              <button class="action-btn" id="add-item-btn">
+                <i class="fas fa-plus"></i> Добавить товар
+              </button>
+              <button class="action-btn" id="view-users-btn">
+                <i class="fas fa-user-friends"></i> Пользователи
+              </button>
+              <button class="action-btn" id="export-data-btn">
+                <i class="fas fa-download"></i> Экспорт данных
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">
+          © 2025 Night Cafe. Административная панель. Только для авторизованного
+          персонала.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

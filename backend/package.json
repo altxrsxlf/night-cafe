@@ -1,8 +1,11 @@
 {
   "name": "night-cafe-backend",
   "version": "1.0.0",
+  "description": "Backend сервер для Night Cafe",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "express": "^4.18.0",
